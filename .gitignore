@@ -1,0 +1,17 @@
+# Python byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyc
+
+# PIP installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/*
+
+# LateX generated files
+*.pdf
+
+# Other files
+.netrwhist
+*.swp
+junk/
