@@ -11,21 +11,7 @@ The contents are as follows:
 
 Dependencies
 ------------
-To properly use this configuration with Monte-Python, custom vim
-wrapper scripts and compiled binary are required. These
-automatically use the corrected compiled binary based on 
-Monte version.
-
-Therefore, the following directories should be added to path
-in ~/.my_cshrc files (or equivalent):
-
-* Nexus: ``set path (/home/byoung/.vimnav/bin $path)``
-* Fltops: ``set path (/nav/home/byoung/.vimnav/bin $path)``
-
-Additionally, to use pyflakes Syntax checker for python, you need
-to install the pyflakes library in your python path.
-For example, ``pip install pyflakes dir/in/pypath/``, or
-``mpkg install pyflakes dir/in/pypath/``.
+To properly use this configuration a current version must be available.
 
 
 To setup on new machine
