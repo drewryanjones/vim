@@ -83,10 +83,6 @@ vnoremap <leader>s :sort<CR>
 
 "" File type specific settings
 "" ===========================
-"" Recognize .mpy files as python syntax
-au BufRead,BufNewFile *.mpy set filetype=mpython    " Make it recognize .mpy files as python
-au FileType mpython setlocal syntax=python
-
 "" Python
 au FileType python set number
 au FileType python set foldmethod=indent  " Turn on code-folding with everything pre-folded
@@ -105,10 +101,6 @@ au FileType mpython,python,tex set colorcolumn=81
 au FileType mpython,python,tex highlight ColorColumn ctermbg=green
 au FileType python,mpython hi ExtraWhitespace ctermbg=grey guibg=red
 au FIleType python,mpython match ExtraWhitespace /\s\+$/
-
-
-"map <buffer> <S-e> :w<CR>:!/bin/env mpython_iq % <CR> " Execute mpython file
-"                                                      " being edited with <Shift> + e
 
 
 "" Custom Functions
