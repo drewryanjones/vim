@@ -4,14 +4,17 @@
 
 "" Plugin management
 "" =================
+set nocompatible
 filetype off " Temporary
-set rtp +=~/.vim/bundle/Vundle.vim " Runtime path
+set rtp+=/home/drew/.vim/bundle/Vundle.vim " Runtime path
 call vundle#begin()
-  " List all plugins
+"  " List all plugins
   Plugin 'VundleVim/Vundle.vim', {'pinned': 1} 
   Plugin 'The-NERD-tree'
   Plugin 'Syntastic'
   Plugin 'ervandew/supertab'
+  Plugin 'godlygeek/tabular'
+  Plugin 'plasticboy/vim-markdown'
 call vundle#end()
 
 "" Automatic reloading of .vimrc
@@ -102,6 +105,9 @@ au FileType mpython,python,tex highlight ColorColumn ctermbg=green
 au FileType python,mpython hi ExtraWhitespace ctermbg=grey guibg=red
 au FIleType python,mpython match ExtraWhitespace /\s\+$/
 
+"" Markdown
+au BufRead,BufNewFile *.md setlocal spell
+
 
 "" Custom Functions
 "" ================
@@ -144,3 +150,7 @@ let g:syntastic_python_checkers = ['pyflakes', 'python']
 set statusline+=\\\%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+"" Markdown syntax highlighting
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_frontmatter = 1
